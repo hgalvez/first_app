@@ -13,5 +13,9 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-input placeholder="Enter Input" [(ngModel)]="mensaje" type="text"></ion-input>
+  <ion-button expand="block" (click)="basic_alert('Esto es una alerta')" >Modal</ion-button>
+  <ion-button expand="block" (click)="alert_btn('boton1')">Boton 1</ion-button>
+  <ion-button expand="block" (click)="alert_btn('boton2')">Boton 2</ion-button>
   <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
