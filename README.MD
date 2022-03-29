@@ -48,4 +48,8 @@ ionic serve
 
 ctrl + z // Apagar el server
 
+Ciclos de vida
 https://ionicframework.com/blog/navigating-lifecycle-events/
+
+Generar paginas
+https://ionicframework.com/docs/cli/commands/generate
