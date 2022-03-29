@@ -10,8 +10,25 @@ export class Tab2Page {
   numero: any;
 
   constructor() {
-    
+    // si todo esta bien
+    // let json ={
+    //   "success": true,
+    //   "msj": "Todo bien con los datos"
+    // }
+
+    // let json ={
+    //   "success": false,
+    //   "msj": "El correo no tiene el formato correcto"
+    // }
   }
+
+  // alert(json){
+  //   if(json.success == true){
+  //     presentalert(json.msj);
+  //   }else{
+  //     presentalert(json.msj)
+  //   }
+  // }
 
   push_button(){
     if(this.numero == undefined || this.numero == ""){

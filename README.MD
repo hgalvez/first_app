@@ -29,15 +29,23 @@ Cards
 
 Botones
 
+Buscador
+
 Iconos
 
 Ruteo
 
 Login
 
+Escaner Codigo de Barras
+
 HttpClient
+
+
 
 ### Inicio de server
 ionic serve
 
 ctrl + z // Apagar el server
+
+https://ionicframework.com/blog/navigating-lifecycle-events/
