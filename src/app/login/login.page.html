@@ -7,6 +7,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
+  <ion-grid>
+    <ion-row >
+      <ion-item class="item_size">
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input [(ngModel)]="user"></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item class="item_size">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <!-- <ion-button expand="block" color="danger" [routerLink]="['/tabs']" (click)="login()">Aceptar</ion-button> -->
+        <ion-button expand="block" color="danger" (click)="login()">Aceptar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
