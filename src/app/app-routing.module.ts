@@ -9,6 +9,14 @@ const routes: Routes = [
   {
     path: 'prelogin',
     loadChildren: () => import('./prelogin/prelogin.module').then( m => m.PreloginPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'subscribe',
+    loadChildren: () => import('./subscribe/subscribe.module').then( m => m.SubscribePageModule)
   }
 ];
 @NgModule({

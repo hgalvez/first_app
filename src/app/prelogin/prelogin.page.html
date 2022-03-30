@@ -1,9 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>prelogin</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+
+<ion-content class="bg_content">
+  <ion-grid class="first_grid">
+    <ion-row>
+      <ion-col>
+        <img class="center_img" src="assets/imagenes_genericas/logo.png">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="login()">Iniciar Sesión</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="danger" [routerLink]="['/subscribe']">Suscribete</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="tlt_paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

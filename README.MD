@@ -42,7 +42,6 @@ Escaner Codigo de Barras
 HttpClient
 
 
-
 ### Inicio de server
 ionic serve
 
@@ -53,3 +52,7 @@ https://ionicframework.com/blog/navigating-lifecycle-events/
 
 Generar paginas
 https://ionicframework.com/docs/cli/commands/generate
+
+### Colores
+Azul: #25506b
+Dorado: #8a7b6e
