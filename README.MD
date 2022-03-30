@@ -1,5 +1,5 @@
 
-### TEMARIO GENERAL###
+### TEMARIO GENERAL
 - Introducción general
 - Configuración de ambiente de desarrollo
 - Fundamentos básicos de Ionic Framework
@@ -26,16 +26,16 @@
 
 
 ### Inicio de server
-ionic serve
+´´´ ionic serve
 
-ctrl + z // Apagar el server
+´´´ ctrl + z // Apagar el server
 
-Ciclos de vida
+# Ciclos de vida
 https://ionicframework.com/blog/navigating-lifecycle-events/
 
-Generar paginas
+# Generar paginas
 https://ionicframework.com/docs/cli/commands/generate
 
 ### Colores
-Azul: #25506b
-Dorado: #8a7b6e
+- Azul: #25506b
+- Dorado: #8a7b6e
