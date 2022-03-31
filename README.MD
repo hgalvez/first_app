@@ -8,7 +8,7 @@
 - Primera vista de la app
 - Estilos y temas
 - Consumir servicios
-- GPS, sensores, notificaciones, cámara, etc.
+- GPS-Google maps, sensores, notificaciones, cámara, etc.
 - Build y deploy de apk en Android
 - Deploy en iOS
 
@@ -16,14 +16,14 @@
 - Alertas
 - Cards
 - Botones
-- Buscador
 - Iconos
 - Ruteo
 - Login
-- Escaner Codigo de Barras
 - HttpClient
 - Toasts
-
+- Storage
+- Buscador
+- Escaner Codigo de Barras
 
 ### Inicio de server
 ``` ionic serve ```
@@ -35,6 +35,12 @@ https://ionicframework.com/blog/navigating-lifecycle-events/
 
 ### Generar paginas
 https://ionicframework.com/docs/cli/commands/generate
+
+### Ideas para diseño
+https://androidniceties.tumblr.com/
+
+### API ANGULAR
+https://angular.io/api/common/http/HttpClient
 
 ### Colores
 - Azul: #25506b

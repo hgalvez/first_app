@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { GeneralService } from '../api/general.service';
+import { LoadingController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-login',
@@ -10,9 +13,12 @@ import { Router } from '@angular/router'
 export class LoginPage implements OnInit {
   user: any;
   password: any;
+  loading: any;
 
   constructor(public alertController: AlertController,
-              public router: Router
+              public router: Router,
+              public general_service: GeneralService,
+              public loadingController: LoadingController
               ) { 
 
   }
@@ -20,36 +26,44 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-
   login(){
     console.log(this.user);
     console.log(this.password);
     if(this.user == "" || this.user == undefined || this.password == "" || this.password == undefined){
       this.basic_alert("¡Alerta!","Los accesos son incorrecto");
     }else{
-      // La llamada al servidor
-      // var login ={
-      //   "user": "renan",
-      //   "password": "renan"
-      // }
-      // Respuesta
-      var response ={
-        "success": false,
-        "mensaje": "Login correcto"
-      }
 
-      if(response.success == true){
+      let user_info = {
+                          "login": this.user,
+                          "password": this.password
+                      }
+
+      this.presentLoading("Espera porfavor");
+
+      this.general_service.login(user_info).subscribe(response =>{
+        const { role, data } = this.loading.dismiss();
         this.router.navigate(['tabs'], { replaceUrl: true });
-      }else{
-        console.log("Esto es de la respuesta del server")
-        this.basic_alert("¡Alerta!","Los accesos son incorrecto");
-      }
+      },(err) =>{
+        const { role, data } = this.loading.dismiss();
+        this.basic_alert("¡Alerta!","Los accesos son incorrectos");
+      });
     }
+
+    console.log("IMprimir");
   }
 
   validate(){
     // codigo
     // return True o un False
+  }
+
+  async presentLoading(msj) {
+    this.loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: msj,
+      duration: 6000
+    });
+    await this.loading.present();
   }
 
   async basic_alert(title,msj) {

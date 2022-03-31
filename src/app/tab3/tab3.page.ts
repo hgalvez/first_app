@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { UtilitiesService } from '../api/utilities.service'
 
 @Component({
   selector: 'app-tab3',
@@ -9,7 +10,9 @@ import { AlertController } from '@ionic/angular';
 export class Tab3Page {
   mensaje: any;
 
-  constructor(public alertController: AlertController) {}
+  constructor(public alertController: AlertController,
+              public utility: UtilitiesService
+    ) {}
 
   alert_btn(from){
     if(from == "boton1"){
@@ -17,6 +20,10 @@ export class Tab3Page {
     }else{
       this.basic_alert("Vengo del boton2","Esto es el mensaje del boton2");
     }
+  }
+
+  close(){
+    this.utility.back_button('prelogin');
   }
 
   async basic_alert(variable,variable2) {

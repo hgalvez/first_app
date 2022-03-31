@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -9,7 +10,7 @@ import { Component } from '@angular/core';
 export class Tab2Page {
   numero: any;
 
-  constructor() {
+  constructor(public router: Router) {
     // si todo esta bien
     // let json ={
     //   "success": true,
@@ -21,7 +22,7 @@ export class Tab2Page {
     //   "msj": "El correo no tiene el formato correcto"
     // }
   }
-
+  
   // alert(json){
   //   if(json.success == true){
   //     presentalert(json.msj);
@@ -36,6 +37,10 @@ export class Tab2Page {
     }else{
       console.log(this.numero);
     }
+  }
+
+  close(){
+    this.router.navigate(['prelogin'], { replaceUrl: true });
   }
 
 }
