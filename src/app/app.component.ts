@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,22 @@ import { Router } from '@angular/router';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(public router: Router) {
-
+  constructor(public router: Router,
+              private storage: Storage) {
+                
+    this.storage.create();
   }
 
   ngOnInit(){
     console.log("Justo en entrar");
-    this.router.navigate(['prelogin'], { replaceUrl: true });
+    this.storage.get("token").then((token)=>{
+      if(token == ""){
+        this.router.navigate(['prelogin'], { replaceUrl: true });
+      }else{
+        this.router.navigate(['tabs'], { replaceUrl: true });
+      }
+      console.log(token);
+    });
   }
 
 }

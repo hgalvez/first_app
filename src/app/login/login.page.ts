@@ -18,17 +18,17 @@ export class LoginPage implements OnInit {
   constructor(public alertController: AlertController,
               public router: Router,
               public general_service: GeneralService,
-              public loadingController: LoadingController
+              public loadingController: LoadingController,
+              private storage: Storage
               ) { 
 
   }
 
   ngOnInit() {
+    
   }
 
   login(){
-    console.log(this.user);
-    console.log(this.password);
     if(this.user == "" || this.user == undefined || this.password == "" || this.password == undefined){
       this.basic_alert("¡Alerta!","Los accesos son incorrecto");
     }else{
@@ -40,8 +40,16 @@ export class LoginPage implements OnInit {
 
       this.presentLoading("Espera porfavor");
 
-      this.general_service.login(user_info).subscribe(response =>{
+      // Aqui se genera el servicio de logueo
+      this.general_service.login(user_info, "login").subscribe(response =>{
+        console.log("Estoy en el servicio");
+        console.log(response);
+        console.log(response.success.token);
         const { role, data } = this.loading.dismiss();
+        this.storage.set('token', response.success.token);
+        this.storage.set('name', "Renan");
+        this.storage.set('last_name', "Carrillo");
+        this.storage.set('json_response',response);
         this.router.navigate(['tabs'], { replaceUrl: true });
       },(err) =>{
         const { role, data } = this.loading.dismiss();

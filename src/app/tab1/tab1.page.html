@@ -8,8 +8,26 @@
 </ion-header>
 
 <ion-content fullscreen>
+  <ion-list>
+
+    <!-- <ion-item *ngFor="let product of products">
+      <ion-label>{{ product.label }}</ion-label>
+      <ion-lable> {{ product.price_min }} </ion-lable>
+    </ion-item> -->
+
+    <ion-item *ngFor="let product of products" (onclick)="product_detail('{{ product.id }}')">
+      <ion-avatar slot="start">
+        <img src="../../assets/imagenes_genericas/moon.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Nombre: {{ product.label }}</h2>
+        <h3>Precio min: {{ product.price_min }}</h3>
+        <p>Nota: {{ product.note }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
   
-  <ion-card>
+  <!-- <ion-card>
     <img src="../../assets/imagenes_genericas/moon.jpg" />
     <ion-card-header>
       <ion-card-subtitle>Astronomía</ion-card-subtitle>
@@ -42,6 +60,6 @@
       Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the
       Wisconsin Territory in 1836.
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
 
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UtilitiesService } from '../api/utilities.service'
 
 @Component({
   selector: 'app-tab2',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class Tab2Page {
   numero: any;
 
-  constructor(public router: Router) {
+  constructor(public router: Router, public utility: UtilitiesService) {
     // si todo esta bien
     // let json ={
     //   "success": true,
@@ -40,7 +41,7 @@ export class Tab2Page {
   }
 
   close(){
-    this.router.navigate(['prelogin'], { replaceUrl: true });
+    this.utility.back_button('prelogin');
   }
 
 }

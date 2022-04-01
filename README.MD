@@ -39,8 +39,11 @@ https://ionicframework.com/docs/cli/commands/generate
 ### Ideas para diseño
 https://androidniceties.tumblr.com/
 
-### API ANGULAR
+### HttpClient ANGULAR
 https://angular.io/api/common/http/HttpClient
+
+### Storage
+https://github.com/ionic-team/ionic-storage
 
 ### Colores
 - Azul: #25506b
