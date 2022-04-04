@@ -13,6 +13,7 @@
 - Deploy en iOS
 
 ## RECORDATORIO DE VER
+<!-- Primera parte  -->
 - Alertas
 - Cards
 - Botones
@@ -20,10 +21,20 @@
 - Ruteo
 - Login
 - HttpClient
-- Toasts
 - Storage
-- Buscador
+<!-- Hasta aqui vamos -->
+- Toasts
+- Pasar datos entre paginas
+- Componentes
+
+<!-- Segunda parte  -->
+- Compilar
+- Iconos
+- Splashscreen
 - Escaner Codigo de Barras
+- GPS
+- Notificaciones
+- Camara
 
 ### Inicio de server
 ``` ionic serve ```
@@ -48,3 +59,7 @@ https://github.com/ionic-team/ionic-storage
 ### Colores
 - Azul: #25506b
 - Dorado: #8a7b6e
+
+### Compilacion https://ionicframework.com/docs/cli/commands/capacitor-build
+ionic cordova run android
+ionic cordova run ios

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UtilitiesService } from '../api/utilities.service'
+// import { Toast } from '@awesome-cordova-plugins/toast/ngx';
 
 @Component({
   selector: 'app-tab2',

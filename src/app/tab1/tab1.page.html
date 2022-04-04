@@ -15,7 +15,8 @@
       <ion-lable> {{ product.price_min }} </ion-lable>
     </ion-item> -->
 
-    <ion-item *ngFor="let product of products" (onclick)="product_detail('{{ product.id }}')">
+    <ion-item *ngFor="let product of products" (click)="product_detail(product.id)">
+    <!-- <ion-item *ngFor="let product of products" [routerLink]="['/product',product.id]"> -->
       <ion-avatar slot="start">
         <img src="../../assets/imagenes_genericas/moon.jpg" />
       </ion-avatar>

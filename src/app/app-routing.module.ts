@@ -17,6 +17,14 @@ const routes: Routes = [
   {
     path: 'subscribe',
     loadChildren: () => import('./subscribe/subscribe.module').then( m => m.SubscribePageModule)
+  },
+  {
+    path: 'product-detail/:product_id',
+    loadChildren: () => import('./product-detail/product-detail.module').then( m => m.ProductDetailPageModule)
+  },
+  {
+    path: 'product/:product_id',
+    loadChildren: () => import('./product/product.module').then( m => m.ProductPageModule)
   }
 ];
 @NgModule({

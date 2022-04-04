@@ -33,6 +33,9 @@ export class LoginPage implements OnInit {
       this.basic_alert("¡Alerta!","Los accesos son incorrecto");
     }else{
 
+      // usr: test
+      // psw: test123
+
       let user_info = {
                           "login": this.user,
                           "password": this.password

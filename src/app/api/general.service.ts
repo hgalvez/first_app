@@ -44,6 +44,20 @@ export class GeneralService {
     );
   }
 
+  product_detail(endpoint, token, id): Observable<any>{
+    let httpOptions ={
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'DOLAPIKEY': token
+      })
+    }
+    return this.http.get(this.base_url + endpoint + id, httpOptions).pipe(
+      retry(2)
+    );
+  }
+
+
+
   //Este servicio es para el detalle del producto
   // https://live.sysbiterp.com/api/index.php/products/143
 

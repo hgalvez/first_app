@@ -40,7 +40,8 @@ export class Tab1Page {
   }
 
   product_detail(id){
-    console.log(id);
+    console.log("presionando el item");
+    this.router.navigate(['product', id]);
   }
 
   close(){
