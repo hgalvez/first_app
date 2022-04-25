@@ -14,13 +14,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-input placeholder="Enter Input" [(ngModel)]="mensaje" type="text"></ion-input>
+  <ion-input placeholder="Enter Input" [(ngModel)]="mensaje" type="text" (ionChange)="onChange($event)"></ion-input>
   <ion-button expand="block" (click)="basic_alert('Esto es una alerta')" >Modal</ion-button>
   <ion-button expand="block" (click)="alert_btn('boton1')">Boton 1</ion-button>
   <ion-button expand="block" (click)="alert_btn('boton2')">Boton 2</ion-button>
   <ion-icon name="logo-twitter"></ion-icon>
   <img src="../../assets/imagenes_genericas/moon.jpg" alt="">
 
-  <app-cards icon_name="american-football-outline" text="Esto es el texto del tab 3">
-  </app-cards>
+  <ion-button expand="block" (click)="presentToast('Este es el toast')">Toast</ion-button>
+  <ion-button expand="block" (click)="bar_code()">Código de barras</ion-button>
+  <ion-button expand="block" (click)="camara()">Camara</ion-button>
+  <img [src]="clickedImage" />
 </ion-content>

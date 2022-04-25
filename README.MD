@@ -22,7 +22,6 @@
 - Login
 - HttpClient
 - Storage
-<!-- Hasta aqui vamos -->
 - Toasts
 - Pasar datos entre paginas
 - Componentes
@@ -31,10 +30,14 @@
 - Compilar
 - Iconos
 - Splashscreen
+- Eventos - (ionChange)
+- Rutas de apk 
 - Escaner Codigo de Barras
-- GPS
-- Notificaciones
 - Camara
+<!-- Hasta aqui vamos -->
+- GPS
+
+- Notificaciones
 
 ### Inicio de server
 ``` ionic serve ```
@@ -61,5 +64,25 @@ https://github.com/ionic-team/ionic-storage
 - Dorado: #8a7b6e
 
 ### Compilacion https://ionicframework.com/docs/cli/commands/capacitor-build
-ionic cordova run android
-ionic cordova run ios
+``` ionic cordova run android ```
+``` ionic cordova run ios ```
+
+### Colores de aplicacion
+https://ionicframework.com/docs/theming/basics
+
+### Resources de cordova
+https://ionicframework.com/docs/cli/commands/cordova-resources
+
+### Photoshop online
+https://www.photopea.com/
+
+### Codigo QR
+https://ionicframework.com/docs/v3/native/qr-scanner/
+
+
+### Comandos extras
+- Borrar plataforma
+``` ionic cordova platform rm android ```
+
+### Informacion del dispositivo
+https://ionicframework.com/docs/native/device

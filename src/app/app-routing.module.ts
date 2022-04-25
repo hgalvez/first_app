@@ -25,6 +25,14 @@ const routes: Routes = [
   {
     path: 'product/:product_id',
     loadChildren: () => import('./product/product.module').then( m => m.ProductPageModule)
+  },
+  {
+    path: 'scaner',
+    loadChildren: () => import('./scaner/scaner.module').then( m => m.ScanerPageModule)
+  },
+  {
+    path: 'camara',
+    loadChildren: () => import('./camara/camara.module').then( m => m.CamaraPageModule)
   }
 ];
 @NgModule({

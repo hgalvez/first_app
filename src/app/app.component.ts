@@ -17,12 +17,17 @@ export class AppComponent {
   ngOnInit(){
     console.log("Justo en entrar");
     this.storage.get("token").then((token)=>{
-      if(token == ""){
+      console.log("token");
+      console.log(token);
+      if(token == "" || token == null || token == undefined){
         this.router.navigate(['prelogin'], { replaceUrl: true });
       }else{
         this.router.navigate(['tabs'], { replaceUrl: true });
       }
       console.log(token);
+    },(error) =>{
+      console.log(error);
+      this.router.navigate(['prelogin'], { replaceUrl: true });
     });
   }
 
