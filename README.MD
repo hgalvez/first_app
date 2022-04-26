@@ -86,3 +86,13 @@ https://ionicframework.com/docs/v3/native/qr-scanner/
 
 ### Informacion del dispositivo
 https://ionicframework.com/docs/native/device
+
+### Google maps
+
+https://medium.com/@alejandrolp1986/google-maps-places-y-autocomplete-en-tu-ionic-5-app-8e29b3fd6804
+
+### Notificaciones
+https://documentation.onesignal.com/docs/cordova-sdk-setup
+
+### Whatsapp mensajes masivo
+https://www.twilio.com/go/whatsapp-api-spa-latam-1?utm_source=google&utm_medium=cpc&utm_term=whatsapp%20business%20api&utm_campaign=G_S_LATAM_NB_Whatsapp_Spanish&gclid=CjwKCAjwsJ6TBhAIEiwAfl4TWBv2RihkMrxVkHGrWdRf_we28a61UiasXCUjViGTCb7FkozyNt7C7RoCu0sQAvD_BwE

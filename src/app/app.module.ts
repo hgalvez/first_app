@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage-angular';
 // import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { Camera } from '@awesome-cordova-plugins/camera/ngx';
 import { Device } from '@awesome-cordova-plugins/device/ngx';
 import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
@@ -29,6 +30,7 @@ import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
     Geolocation,
     Camera,
     Device,
+    NativeGeocoder,
     { provide: 
       RouteReuseStrategy, 
       useClass: IonicRouteStrategy 

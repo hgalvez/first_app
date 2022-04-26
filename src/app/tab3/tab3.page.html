@@ -14,6 +14,14 @@
     </ion-toolbar>
   </ion-header>
 
+  <div class="map-wrapper" style="height: 50%;">      
+    <div id="map_center">
+      <ion-icon name="pin-outline" size="large" color="danger"></ion-icon>
+      <!-- <img src="../../assets/imagenes_genericas/moon.jpg" alt=""> -->
+    </div>
+    <div #map id="map" style="height: 100%;"></div>
+  </div>   
+
   <ion-input placeholder="Enter Input" [(ngModel)]="mensaje" type="text" (ionChange)="onChange($event)"></ion-input>
   <ion-button expand="block" (click)="basic_alert('Esto es una alerta')" >Modal</ion-button>
   <ion-button expand="block" (click)="alert_btn('boton1')">Boton 1</ion-button>
